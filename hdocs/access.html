@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+      <link href="/EXPStc/favicon.ico" rel="shortcut icon"/>
+      <!--<link rel="stylesheet" type="text/css" href="/CSS/PUI/preload.css"/>-->
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/jquery-ui12.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/primeui.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/theme/midnight/theme.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/hamburgers.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/jquery.mmenu.all.css"/>
+      <link rel="stylesheet" type="text/css" href="/MehafStc/CSS/style.css">
+
+      <script type="text/javascript" src="/JS/PUI/jquery3.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/jquery-ui12.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/primeui.min.js"></script>
+      <script type="text/javascript" src="/JS/pace.js"></script>
+      <script type="text/javascript" src="/JS/PUI/jquery.mmenu.all.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/JQSessions.js"></script>
+      <script  type="text/javascript" src="/MehafStc/JS/buttons.js"></script>
+      <script  type="text/javascript" src="/MehafStc/JS/DataBaseTable.js"></script>
+
+      <style media="screen">
+      .ui-widget-content {background: white}
+
+      .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background: white;
+      color: black;}
+      </style>
+
+</head>
+
+
+
+<body>
+  <div class = "header"><button id="happy" class="hamburger hamburger--collapse" type="button">
+     <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+     </span>
+  Menu</button></div>
+
+  <div class="page">
+     <div class="header">
+        <a href="#menu"></a>
+
+
+       </div>
+     <div class="content">
+
+       <div class="ui-grid ui-grid-responsive">
+           <div class="ui-grid-row"><div class="ui-grid-col-12"><div id="tbllocal"></div></div>
+    </div>
+</div>
+
+<div class="ui-grid ui-grid-responsive">
+<div class="ui-grid-row">
+
+<div class="ui-grid-col-3">
+<h3 class="first">Vin</h3>
+<input id="in1" type="text" size="30"/>
+
+</div>
+
+
+<div class="ui-grid-col-3">
+<h3 class="first">Brand</h3>
+<input id="in2" type="text" size="30"/>
+
+</div>
+
+<div class="ui-grid-col-3">
+<h3 class="first">Year</h3>
+<input id="in3" type="text" size="30"/>
+</div>
+
+
+<div class="ui-grid-col-3">
+<h3 class="first">Color</h3>
+<input id="in4" type="text" size="30"/>
+<button id = "button1" onclick="submit()">submit</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+     </div>
+  </div>
+
+
+
+
+<nav id="menu">
+
+           <ul>
+              <li><a href="../MehaffeysSandbox">Home</a></li>
+             <li><a>Projects</a>
+                 <div id = "white"><ul>
+                    <li><a href="/MehafStc/oracle.html">Input and Output</a></li>
+                    <li><a href="#">Database Table</a></li>
+                    <li><a href="/MehafStc/intern.html">Table with Input</a></li>
+                 </ul></div>
+              </li>
+              <li><a href="/MehafStc/contact.html">Contact</a></li>
+              <li><span><img src="/MehafStc/IMG/profile.jpg"/> Sean Mehaffey</span>
+           </ul>
+
+        </nav>
+
+
+
+
+
+<script type = "text/javascript">
+var $menu = $("#menu").mmenu({
+  "slidingSubmenus": false,
+  "extensions": [
+     "fx-menu-zoom",
+
+  ],
+    "counters": true,
+               "navbars": [
+                  {
+
+
+                  }
+               ]
+});
+var $icon = $("#happy");
+var API = $menu.data( "mmenu" );
+
+$icon.on( "click", function() {
+   API.open();
+});
+
+API.bind( "open:finish", function() {
+   setTimeout(function() {
+      $icon.addClass( "is-active" );
+   }, 100);
+});
+API.bind( "close:finish", function() {
+   setTimeout(function() {
+      $icon.removeClass( "is-active" );
+   }, 100);
+});
+
+</script>
+
+
+</body>
+
+
+
+
+</html>

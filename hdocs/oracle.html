@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+      <link href="/EXPStc/favicon.ico" rel="shortcut icon"/>
+      <!--<link rel="stylesheet" type="text/css" href="/CSS/PUI/preload.css"/>-->
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/jquery-ui12.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/primeui.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/theme/midnight/theme.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/hamburgers.css"/>
+      <link rel="stylesheet" type="text/css" href="/CSS/PUI/jquery.mmenu.all.css"/>
+      <link rel="stylesheet" type="text/css" href="/MehafStc/CSS/style.css">
+
+      <script type="text/javascript" src="/JS/PUI/jquery3.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/jquery-ui12.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/primeui.min.js"></script>
+      <script type="text/javascript" src="/JS/pace.js"></script>
+      <script type="text/javascript" src="/JS/PUI/jquery.mmenu.all.min.js"></script>
+      <script type="text/javascript" src="/JS/PUI/JQSessions.js"></script>
+      <script  type="text/javascript" src="/MehafStc/JS/buttons.js"></script>
+
+
+<style media="screen">
+.ui-galleria.ui-widget.ui-widget-content.ui-corner-all
+{margin-left: 2%;
+height: 25%;
+width: 22.5%;
+}
+
+.mm-menu {background-color: #009bdf; color: white;}
+</style>
+
+</head>
+
+
+
+<body>
+  <div class = "header"><button id="happy" class="hamburger hamburger--collapse" type="button" >
+     <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+     </span>
+  Menu</button></div>
+
+  <div class="page">
+     <div class="header">
+
+
+
+       </div>
+     <div class="content">
+
+
+
+       <div class="ui-grid ui-grid-responsive">
+    <div class="ui-grid-row">
+
+        <div class="ui-grid-col-4"><div id="options1" style="margin-bottom:20px" title="Name"><p id = "working1"><h1 class = "out1" ></h1><h3 id="out1"></h3></div></div>
+
+
+        <div class="ui-grid-col-4"><div id="options2" style="margin-bottom:20px" title="Employee ID"><p id = "working2"><h1 class = "out2" ></h1><h3 id="out2"></h3></div></div>
+
+
+        <div class="ui-grid-col-4"><div id="options3" style="margin-bottom:20px" title="Vin"><p id = "working3"><h1 class = "out3" ></h1><h3 id="out3"></h3></div></div>
+    </div>
+</div>
+
+<ul id="cars2"></ul>
+
+
+<div class="ui-grid ui-grid-responsive">
+<div class="ui-grid-row">
+
+<div class="ui-grid-col-4">
+<h3 class="first">Name</h3>
+<input id="in1" type="text" size="30"/>
+
+</div>
+
+
+<div class="ui-grid-col-4">
+<h3 class="first">Employee ID</h3>
+<input id="in2" type="text" size="30"/>
+
+</div>
+
+<div class="ui-grid-col-4">
+<h3 class="first">Vin</h3>
+<input id="in3" type="text" size="30"/>
+<button id="button1" onclick="submit();">submit</button>
+</div>
+</div>
+</div>
+
+<div id="default"></div>
+
+
+
+
+     </div>
+
+
+
+       </div>
+    </div>
+
+
+
+
+
+
+<nav id="menu">
+
+           <ul>
+              <li><a href="../MehaffeysSandbox">Home</a></li>
+             <li><a>Projects</a>
+                 <div id = "white"><ul>
+                    <li><a href="#">Input and Output</a></li>
+                    <li><a href="/MehafStc/access.html">Database Table</a></li>
+                    <li><a href="/MehafStc/intern.html">Table with Input</a></li>
+                 </ul></div>
+              </li>
+              <li><a href="/MehafStc/contact.html">Contact</a></li>
+              <li><span><img src="/MehafStc/IMG/profile.jpg"/> Sean Mehaffey</span>
+           </ul>
+
+        </nav>
+
+
+
+
+
+
+<script type = "text/javascript">
+var $menu = $("#menu").mmenu({
+  "slidingSubmenus": false,
+  "extensions": [
+   "popup"
+
+  ],
+    "counters": true,
+               "navbars": [
+                  {
+
+
+                  }
+               ]
+});
+var $icon = $("#happy");
+var API = $menu.data( "mmenu" );
+
+$icon.on( "click", function() {
+   API.open();
+});
+
+API.bind( "open:finish", function() {
+   setTimeout(function() {
+      $icon.addClass( "is-active" );
+   }, 100);
+});
+API.bind( "close:finish", function() {
+   setTimeout(function() {
+      $icon.removeClass( "is-active" );
+   }, 100);
+});
+
+</script>
+
+
+</body>
+
+
+
+
+</html>
