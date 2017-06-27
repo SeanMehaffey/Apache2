@@ -6,7 +6,7 @@ import cgi, cgitb, sys, re, datetime, shlex #, MySQLdb
 import subprocess
 cgitb.enable()
 form = cgi.FieldStorage()
-
+# change
 # function for cmd
 def cmdExe(cmd):
     import subprocess
